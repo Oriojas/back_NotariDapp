@@ -6,7 +6,21 @@ dotenv.config();
 
 /** @type import('hardhat/config').HardhatUserConfig */
 module.exports = {
-  solidity: "0.8.9",
+  solidity: {
+    compilers: [
+      {
+        version: "0.8.9",
+      },
+      {
+        version: "0.8.0",
+        settings: {},
+      },
+      {
+        version: "0.8.1",
+        settings: {},
+      },
+    ],
+  },
   networks: {
     // for optimisim
     "optimisc-goerli": {
